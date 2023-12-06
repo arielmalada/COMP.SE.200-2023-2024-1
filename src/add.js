@@ -14,5 +14,4 @@ import createMathOperation from './.internal/createMathOperation.js'
  * // => 10
  */
 const add = createMathOperation((augend, addend) => augend + addend, 0)
-
 export default add
