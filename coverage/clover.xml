@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1701860467186" clover="3.2.0">
-  <project timestamp="1701860467186" name="All files">
+<coverage generated="1701869848282" clover="3.2.0">
+  <project timestamp="1701869848282" name="All files">
     <metrics statements="40" coveredstatements="40" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1" elements="46" coveredelements="46" complexity="0" loc="40" ncloc="40" packages="1" files="2" classes="2"/>
     <file name="add.js" path="/home/ariel/Project/COMP.SE.200-2023-2024-1/src/add.js">
       <metrics statements="17" coveredstatements="17" conditionals="1" coveredconditionals="1" methods="0" coveredmethods="0"/>
