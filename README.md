@@ -4,7 +4,18 @@
 # Bug Report
 [Bug Report](https://github.com/arielmalada/COMP.SE.200-2023-2024-1/blob/main/bug-report.md)
 
+# Usage
+
+1. clone this repository
+2. run `npm install` to install depedencies
+3. run `npm test` to run the test
+
+
 ## Purpose of this repository
+
+This repository fork from this repository https://github.com/otula/COMP.SE.200-2023-2024-1
+
+Forked Repository Description:
 
 This is a project template for students participating in Software Testing course
 at Tampere University.
