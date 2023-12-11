@@ -1,7 +1,7 @@
 import map from '../map';
 
 describe('map function', () => {
-  it('should map array elements using the provided iteratee', () => {
+  test('should map array elements using the provided iteratee', () => {
     const square = n => n * n;
     const inputArray = [4, 8];
     const expectedResult = [16, 64];
@@ -11,7 +11,7 @@ describe('map function', () => {
     expect(result).toEqual(expectedResult);
   });
 
-  it('should handle an empty array', () => {
+  test('should handle an empty array', () => {
     const square = n => n * n;
     const inputArray = [];
 
@@ -20,7 +20,7 @@ describe('map function', () => {
     expect(result).toEqual([]);
   });
 
-  it('should handle undefined and null arrays', () => {
+  test('should handle undefined and null arrays', () => {
     const square = n => n * n;
 
     // Test with undefined
@@ -32,7 +32,7 @@ describe('map function', () => {
     expect(resultNull).toEqual([]);
   });
 
-  it('should pass the correct arguments to the iteratee function', () => {
+  test('should pass the correct arguments to the iteratee function', () => {
     const mockIteratee = jest.fn((value, index, array) => value + index);
     const inputArray = [1, 2, 3];
 
