@@ -1,5 +1,9 @@
 # Coverage
 [![Coverage Status](https://coveralls.io/repos/github/arielmalada/COMP.SE.200-2023-2024-1/badge.svg?branch=main)](https://coveralls.io/github/arielmalada/COMP.SE.200-2023-2024-1?branch=main)
+
+# Bug Report
+[Bug Report](https://github.com/arielmalada/COMP.SE.200-2023-2024-1/blob/main/bug-report.md)
+
 ## Purpose of this repository
 
 This is a project template for students participating in Software Testing course

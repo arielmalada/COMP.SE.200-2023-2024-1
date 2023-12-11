@@ -1,6 +1,6 @@
 # Bug Report
 
-## toString return `` instead of `undefined` when user give input `undefined`
+## toString return `"undefined"` instead of `undefined` when user give input `undefined`
 ### Description:
 The toString.js module fails to return empty string when the input value is null or undefined.
 
