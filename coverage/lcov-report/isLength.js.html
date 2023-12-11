@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for defaultTo.js</title>
+    <title>Code coverage report for isLength.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -19,20 +19,20 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> defaultTo.js</h1>
+        <h1><a href="index.html">All files</a> isLength.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>23/23</span>
+                <span class='fraction'>33/33</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>3/3</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>23/23</span>
+                <span class='fraction'>33/33</span>
             </div>
         
             
@@ -86,7 +86,17 @@
 <a name='L21'></a><a href='#L21'>21</a>
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
-<a name='L24'></a><a href='#L24'>24</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -104,34 +114,54 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
- * Checks `value` to determine whether a default value should be returned in
- * its place. The `defaultValue` is returned if `value` is `NaN`, `null`,
- * or `undefined`.
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/** Used as references for various `Number` constants. */
+const MAX_SAFE_INTEGER = 9007199254740991
+&nbsp;
+/**
+ * Checks if `value` is a valid array-like length.
  *
- * @since 4.14.0
- * @category Util
+ * **Note:** This method is loosely based on
+ * [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
+ *
+ * @since 4.0.0
+ * @category Lang
  * @param {*} value The value to check.
- * @param {*} defaultValue The default value.
- * @returns {*} Returns the resolved value.
+ * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.
  * @example
  *
- * defaultTo(1, 10)
- * // =&gt; 1
+ * isLength(3)
+ * // =&gt; true
  *
- * defaultTo(undefined, 10)
- * // =&gt; 10
+ * isLength(Number.MIN_VALUE)
+ * // =&gt; false
+ *
+ * isLength(Infinity)
+ * // =&gt; false
+ *
+ * isLength('3')
+ * // =&gt; false
  */
-function defaultTo(value, defaultValue) {
-  return value == null ? defaultValue : value
+function isLength(value) {
+  return typeof value === 'number' &amp;&amp;
+    value &gt; -1 &amp;&amp; value % 1 == 0 &amp;&amp; value &lt;= MAX_SAFE_INTEGER
 }
 &nbsp;
-export default defaultTo
+export default isLength
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
