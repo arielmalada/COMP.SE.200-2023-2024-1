@@ -17,7 +17,7 @@ Return "" (empty string) instead of "null" or "undefined"
 
 **Priority**: 4
 
-**Criticality**: 3
+**Criticality**: 4
 
 **Usage**: 3
 
@@ -41,6 +41,6 @@ return `defaultValue`
 
 **Criticality**: 5
 
-**Usage**: 4
+**Usage**: 3
 
 **Reporter**: Ariel
