@@ -1,18 +1,18 @@
 # Bug Report
 
-## toString return `0` instead of `-0` when user give input `0`
+## toString return `` instead of `undefined` when user give input `undefined`
 ### Description:
-The toString.js module fails to return the string representation of "-0" when the input value is -0.
+The toString.js module fails to return empty string when the input value is null or undefined.
 
 ### Steps to Reproduce:
--  Pass the value -0 to the toString.js function.
+-  Pass the value `null` or `undefined` to the toString.js function.
 -  Observe the return value.
 
 ### Actual Behavior:
-The function returns "-0" when the input is 0. This happens because the comparison in the function uses the double equal operator (==) 
+The function returns "null" or "undefined" when the input is `null` or `undefined`. This happens because the comparison in the function uses the double equal operator (==) 
 
 ### Expected Behavior:
-Return 0 instead of -0
+Return "" (empty string) instead of "null" or "undefined"
 
 
 **Priority**: 4
